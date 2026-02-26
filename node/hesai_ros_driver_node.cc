@@ -66,14 +66,7 @@ int main(int argc, char** argv)
 #endif
 
   std::string config_path;
-
-#ifdef RUN_IN_ROS_WORKSPACE
-   config_path = ros::package::getPath("hesai_ros_driver");
-#else
-   config_path = (std::string)PROJECT_PATH;
-#endif
-
-   config_path += "/config/config.yaml";
+  config_path = "/home/robot/ros2_ws/install/norlab_robot/share/norlab_robot/config/_hesai32_ns.yaml";
 
 #ifdef ROS_FOUND
   ros::NodeHandle priv_hh("~");
